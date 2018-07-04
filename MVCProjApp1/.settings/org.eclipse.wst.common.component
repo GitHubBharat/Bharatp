@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="MVCProjApp1">
+    <wb-module deploy-name="MVCApp1 FirstAppWelcome">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="MVCProjApp1"/>
-        <property name="java-output-path" value="/MVCProjApp1/build/classes"/>
+        <property name="java-output-path" value="/MVCApp1 FirstAppWelcome/build/classes"/>
+        <property name="context-root" value="MVCApp1 FirstAppWelcome"/>
     </wb-module>
 </project-modules>
