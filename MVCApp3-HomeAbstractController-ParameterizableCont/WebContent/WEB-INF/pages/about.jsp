@@ -3,7 +3,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
-<marquee behavior="scroll" style="color: blue;">Welcome to Spring MVC </marquee>
+<marquee behavior="scroll" style="color: blue;">Welcome to Spring MVC </marquee><br>
+<marquee behavior="scroll" style="color: blue;">About</marquee>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>About</title>
 
