@@ -2,10 +2,11 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
+
+<marquee behavior="scroll" style="color: blue;">Welcome to Spring MVC </marquee>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>About</title>
-</head>
+
 <body style="color:green;">
 <h1 style="color: blue;text-align: center;">About</h1>
 <p align="justify">About Rajiv Gandhi Proudyogiki Vishwavidyalaya
