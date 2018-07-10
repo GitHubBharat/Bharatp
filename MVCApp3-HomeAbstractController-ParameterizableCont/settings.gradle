@@ -15,4 +15,4 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'MVCApp3-HomeAbstractController-ParameterizableCont'
+rootProject.name = 'MVApp4-WishMessage-TwoContainer'
