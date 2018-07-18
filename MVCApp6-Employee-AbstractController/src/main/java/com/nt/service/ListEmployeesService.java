@@ -5,5 +5,5 @@ import java.util.List;
 import com.nt.dto.EmployeeDTO;
 
 public interface ListEmployeesService {
-      public List<EmployeeDTO> retriveEmp();
+      public List<EmployeeDTO> retriveAllEmpsRecord();
 }

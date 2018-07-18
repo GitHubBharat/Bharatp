@@ -8,15 +8,28 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
 
+import com.nt.dto.CustomerDTO;
 import com.nt.dto.EmployeeDTO;
+import com.nt.service.ListCustomersService;
 import com.nt.service.ListEmployeesService;
 
-public class ListEmployeeController extends AbstractController {
+public class ListEmployeesController extends AbstractController {
 	private ListEmployeesService service;
 
-	public ListEmployeeController(ListEmployeesService service) {
+	
+	
+
+
+
+	public ListEmployeesController(ListEmployeesService service) {
+		super();
 		this.service = service;
 	}
+
+
+
+
+
 
 	@Override
 	public  ModelAndView handleRequestInternal(HttpServletRequest request, HttpServletResponse response)
@@ -24,7 +37,7 @@ public class ListEmployeeController extends AbstractController {
 		// use dto
 
 		List<EmployeeDTO> listdto = null;
-		listdto = service.retriveEmp();
+		listdto = service.retriveAllEmpsRecord();
 		return new ModelAndView("report_emps", "emplist", listdto);
 
 	}//method

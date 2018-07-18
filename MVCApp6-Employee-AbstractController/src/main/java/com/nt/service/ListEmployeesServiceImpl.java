@@ -23,7 +23,7 @@ public class ListEmployeesServiceImpl implements ListEmployeesService {
 	}
 
 	@Override
-	public List<EmployeeDTO> retriveEmp() {
+	public List<EmployeeDTO> retriveAllEmpsRecord() {
 		List<EmployeeBO> listbo = dao.retriveAllEmpsRecord();
 		// copy list bo object to dto object
 		List<EmployeeDTO> dto = new ArrayList<EmployeeDTO>();

@@ -16,7 +16,7 @@
 <bean id="pvc" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
 <property name="viewName" value="home"/>
 </bean>
-<bean id="lec" class="com.nt.controller.ListEmployeeController">
+<bean id="lec" class="com.nt.controller.ListEmployeesController">
 <constructor-arg ref="empService"/>
 
 </bean>
