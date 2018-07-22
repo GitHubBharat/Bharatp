@@ -14,17 +14,18 @@ import com.nt.bo.RailwayBO;
  *
  */
 public class RailwayDAOImpl implements RailwayDAO {
-	private static final String INSERT_STUDENT = "INSERT INTO MVC_STUDENT (MVC_SPRING_SEQ,SNAME,ADDRESS,COURSE,AVG) VALUES (:SNO,:SNAME,:ADDRESS,:COURSE,:AVG)";
+	private static final String INSERT_Railway = "INSERT INTO RAILWAY VALUES (?,?,?,?,?)";
 	private JdbcTemplate jt;
 
 	public RailwayDAOImpl(JdbcTemplate jt) {
+	
 		this.jt = jt;
 	}
 
 	@Override
 	public int processingTicket(RailwayBO bo) {
 		
-		int result = jt.update(INSERT_STUDENT,bo.getPname(),bo.getFrom(),bo.getTo(),bo.getJounaryStart(),bo.getFare());
+		int result = jt.update(INSERT_Railway,bo.getPname(),bo.getSource(),bo.getDest(),bo.getJounaryStart(),bo.getFare());
 		return result;
 	}
 

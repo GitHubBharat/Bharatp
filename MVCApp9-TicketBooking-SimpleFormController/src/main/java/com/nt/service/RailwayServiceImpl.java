@@ -8,22 +8,29 @@ public class RailwayServiceImpl implements RailwayService {
 	private RailwayDAO dao;
 
 	public RailwayServiceImpl(RailwayDAO dao) {
-		super();
+		
 		this.dao = dao;
 	}
 
 	@Override
-	public String register(RailwayDTO dto) {
+	public String register(RailwayDTO rdto) {
 		// create dto object
-		RailwayDTO stdto = new RailwayDTO();
+		
 		// convert dto to bo
 		RailwayBO bo = new RailwayBO();
- //use dao
+		bo.setPname(rdto.getPname());
+		bo.setSource(rdto.getSource());
+		bo.setDest(rdto.getDest());
+		bo.setJounaryStart(rdto.getJounaryStart());
+		bo.setFare(rdto.getFare());
+		// use dao
 		int result = dao.processingTicket(bo);
-		if(result==0)
+		
+		if (result == 0)
 			return "Registation Failed";
+		
 		else
-			return "Registation Succeded your into please check -->"+result;
-			}
+			return "Registation Succeded your into please check -->"+bo.getPname();
+	}
 
 }

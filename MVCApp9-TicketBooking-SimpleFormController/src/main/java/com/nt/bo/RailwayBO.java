@@ -12,9 +12,9 @@ import java.util.Date;
 public class RailwayBO {
 	
 	private String pname;
-	private String from;
-	private String to ;
-	private Date jounaryStart;
+	private String source;
+	private String dest ;
+	private String jounaryStart;
 	private float fare;
 	public String getPname() {
 		return pname;
@@ -22,22 +22,22 @@ public class RailwayBO {
 	public void setPname(String pname) {
 		this.pname = pname;
 	}
-	public String getFrom() {
-		return from;
+	public String getSource() {
+		return source;
 	}
-	public void setFrom(String from) {
-		this.from = from;
+	public void setSource(String source) {
+		this.source = source;
 	}
-	public String getTo() {
-		return to;
+	public String getDest() {
+		return dest;
 	}
-	public void setTo(String to) {
-		this.to = to;
+	public void setDest(String dest) {
+		this.dest = dest;
 	}
-	public Date getJounaryStart() {
+	public String getJounaryStart() {
 		return jounaryStart;
 	}
-	public void setJounaryStart(Date jounaryStart) {
+	public void setJounaryStart(String jounaryStart) {
 		this.jounaryStart = jounaryStart;
 	}
 	public float getFare() {
@@ -46,4 +46,9 @@ public class RailwayBO {
 	public void setFare(float fare) {
 		this.fare = fare;
 	}
-}
+	@Override
+	public String toString() {
+		return "RailwayBO [pname=" + pname + ", source=" + source + ", dest=" + dest + ", jounaryStart=" + jounaryStart
+				+ ", fare=" + fare + "]";
+	}
+	}

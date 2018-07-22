@@ -25,6 +25,7 @@ public class RailwayTicketGenerateController extends SimpleFormController {
 	private RailwayService service;
 
 	public RailwayTicketGenerateController(RailwayService service) {
+	
 		this.service = service;
 	}
 
@@ -32,21 +33,22 @@ public class RailwayTicketGenerateController extends SimpleFormController {
 	protected ModelAndView onSubmit(HttpServletRequest request, HttpServletResponse response, Object command,
 			BindException errors) throws Exception {
 		// type cast command class object
-		RailwayCommand cmd = (RailwayCommand) command;
-
+		RailwayCommand cmd =  (RailwayCommand)command;
 		// convert cmd to dto object
 		RailwayDTO dto = new RailwayDTO();
-		BeanUtils.copyProperties(dto, cmd);
-		/*dto.setSname(cmd.getSname());
-		dto.setAddress(cmd.getAddress());
-		dto.setCourse(cmd.getCourse());
-		dto.setAvg(cmd.getAvg());*/
+		/* BeanUtils.copyProperties(dto, cmd); */
+	
+		dto.setPname(cmd.getPname());
+		dto.setSource(cmd.getSource());
+		dto.setDest(cmd.getDest());
+		dto.setJounaryStart(cmd.getJounaryStart());
+		dto.setFare(cmd.getFare());
 		// use service
-		String result = null;
-		result = service.register(dto);
+		String result  = service.register(dto);
 
-		return new ModelAndView(result, "resMsg", result);
+		return new ModelAndView(this.getSuccessView(), "resMsg", "result");
 	}
+
 	@Override
 	protected ModelAndView handleInvalidSubmit(HttpServletRequest request, HttpServletResponse response)
 			throws Exception {

@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
 	<!-- cfg handle mapping -->
-	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+	<bean
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
 		<property name="mappings">
 			<props>
 				<prop key="railway.htm">ric</prop>
 			</props>
 		</property>
 	</bean>
+	<!-- resource  -->
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+    <property name="basename" value="com/nt/commons/railCmdValidatorErrors"/>
+    </bean>
+    
 	<!-- cfg controller -->
 	<bean id="ric" class="com.nt.controller.RailwayTicketGenerateController">
 		<property name="formView" value="railway" />
 		<property name="successView" value="result" />
-		<property name="commandClass"
-			value="com.nt.command.RailwayCommand" />
+		<property name="commandClass" value="com.nt.command.RailwayCommand" />
+		<property name="sessionForm" value="true" />
 		<property name="commandName" value="railCmd" />
+		<property name="validator" ref="railValidator"/>
 		<constructor-arg ref="railService" />
 	</bean>
-
+<bean id="railValidator" class="com.nt.validator.RailValidator"/>
 	<!-- cfg view resolver -->
 
 	<bean id="irv"
@@ -27,4 +37,5 @@
 		<property name="prefix" value="/WEB-INF/pages/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+    
 </beans>
