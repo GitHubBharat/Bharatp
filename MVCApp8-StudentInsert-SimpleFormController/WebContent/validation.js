@@ -12,6 +12,9 @@ function validate(frm){
 	document.getElementById("addressErr").innerHTML="";
 	document.getElementById("courseErr").innerHTML="";
 	document.getElementById("avgErr").innerHTML="";
+	
+	 frm.vflag.value="yes";
+	 
 	if(sno==""){
 		document.getElementById("snoErr").innerHTML="student no is manadartory";
 		frm.sno.focus;

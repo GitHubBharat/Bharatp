@@ -4,6 +4,6 @@
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <property name="java-output-path" value="/MVCApp4-WishMessage-TwoContainer/bin"/>
-        <property name="context-root" value="MVCApp5-WishMessage-TwoContainer-Maven"/>
+        <property name="context-root" value="MVCApp4-WishMessage-TwoContainer"/>
     </wb-module>
 </project-modules>

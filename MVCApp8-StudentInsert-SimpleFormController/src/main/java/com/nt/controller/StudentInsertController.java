@@ -55,4 +55,14 @@ public class StudentInsertController extends SimpleFormController {
 		// TODO Auto-generated method stub
 		return new ModelAndView("error");
 	}
+	@Override
+	protected Object formBackingObject(HttpServletRequest request) throws Exception {
+	System.out.println("StudentInsertController.formBackingObject()");
+	//create command class object
+	StudentCommand cmd= new StudentCommand();
+	cmd.setSname("bharat");
+
+	cmd.setAddress("jabalpur");
+	return cmd;
+	}
 }
