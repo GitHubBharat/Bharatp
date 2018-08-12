@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- cfg handle mapping -->
+	<bean
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="emp.htm">ec</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- controller -->
+	<bean id="ec" class="com.er.controller.EmployeeContoroller">
+	<property name="commandClass" value="com.er.command.EmployeeCommand"/>
+	<property name="commandName" value="empCmd"/>
+	<property name="formView" value="employee"/>
+	<property name="successView" value="result"/>
+</bean>
+		<!-- cfg view resolver -->
+	<bean id="irv"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/pages/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+</beans>
