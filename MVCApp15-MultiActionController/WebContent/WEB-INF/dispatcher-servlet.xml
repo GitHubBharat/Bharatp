@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Handler Mapping -->
+	<bean
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="welcome.htm">pvc</prop>
+				<prop key="insert.htm">ac</prop>
+				<prop key="update.htm">ac</prop>
+				<prop key="delete.htm">ac</prop>
+				<prop key="find.htm">ac</prop>
+				<prop key="invalid.htm">ac</prop>
+			</props>
+		</property>
+	</bean>
+
+
+	<!-- Controller class cfg -->
+	<bean id="pvc"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" value="user" />
+	</bean>
+	<!-- cfgs controller -->
+<bean id="ac"  class="com.er.controller.AdmissionController"/>
+	<!-- view Resolver cfg -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/pages/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+
+</beans>

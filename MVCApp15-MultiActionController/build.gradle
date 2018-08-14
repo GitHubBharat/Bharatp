@@ -1,0 +1,32 @@
+
+apply plugin: 'java-library'
+apply plugin: 'war'
+
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+
+// https://mvnrepository.com/artifact/org.projectlombok/lombok
+compile group: 'org.projectlombok', name: 'lombok', version: '1.18.0'
+
+
+compile group: 'org.springframework', name: 'spring-webmvc', version: '3.2.16.RELEASE'
+// https://mvnrepository.com/artifact/org.springframework/spring-context-support
+compile group: 'org.springframework', name: 'spring-context-support', version: '3.2.16.RELEASE'
+// https://mvnrepository.com/artifact/org.springframework/spring-jdbc
+compile group: 'org.springframework', name: 'spring-jdbc', version: '3.2.16.RELEASE'
+
+compile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+// https://mvnrepository.com/artifact/org.springframework/spring-context-support
+compile group: 'commons-logging', name: 'commons-logging', version: '1.2'
+// https://mvnrepository.com/artifact/org.springframework/spring-web
+compile group: 'taglibs', name: 'standard', version: '1.1.2'
+    // https://mvnrepository.com/artifact/javax.servlet/jstl
+compile group: 'javax.servlet', name: 'jstl', version: '1.2'
+
+   compile files ('C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\jdbc\\lib\\ojdbc6.jar')
+  }
+

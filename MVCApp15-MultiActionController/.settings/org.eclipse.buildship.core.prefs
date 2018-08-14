@@ -1,0 +1,8 @@
+auto.sync=false
+build.scans.enabled=false
+connection.gradle.distribution=GRADLE_DISTRIBUTION(WRAPPER)
+connection.project.dir=
+eclipse.preferences.version=1
+gradle.user.home=G\:/Study Software's/All Zip's/gradle-3.5
+offline.mode=false
+override.workspace.settings=true
