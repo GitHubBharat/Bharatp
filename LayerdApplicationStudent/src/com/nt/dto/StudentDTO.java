@@ -10,7 +10,7 @@ public class  StudentDTO implements Serializable{
 	private int m3;
 	public int getSno() {
 		return sno;
-	}
+	}       
 	public void setSno(int sno) {
 		this.sno = sno;
 	}
