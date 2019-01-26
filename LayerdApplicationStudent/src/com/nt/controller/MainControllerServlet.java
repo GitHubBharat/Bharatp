@@ -68,5 +68,5 @@ public class MainControllerServlet extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		doGet(req, res);
 	}
-
+     
 }
